@@ -9,6 +9,7 @@ using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 using Newtonsoft.Json;
 using WebexBot.Infrastructure;
+using WebexBot.Models;
 
 namespace WebexBot.Bots
 {
@@ -55,7 +56,9 @@ namespace WebexBot.Bots
                         }
                         else
                         {
-                            message = "You are not enabled for this action";
+                            message = "You are not enabled for this action. You are enabled for this actions: " + "\n";
+                            List<Actions> actionsList = adoDbAccessor.GetActionsByClientID(clientID);
+                            actionsList.ForEach(action => message += action.ID + " - " + action.Description + "\n");
                         }
                     }
                     else

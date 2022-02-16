@@ -9,7 +9,7 @@ namespace WebexBot.Models
     {
         public int ID { get; set; }
         public int ActionID { get; set; }
-        public int UserID { get; set; }
+        public string ClientID { get; set; }
         public bool Enabled { get; set; }
         public string ActionDescription { get; set; }
     }

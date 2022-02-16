@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Il4O4zGAVJBB7IY9iS6tHEDRI+5gO+uKJ+K/7pRZdnMRcOTZXPwLOITHjupSmbnz2Dc3+R4ymMBtL1H5rCpMvw==",
+  "dgSpecHash": "x0Q9iBkrLDNnBJ3AmthP+Ni5L6QGA8WNQJw2QbbtfgO+h0BL7nSb+AMglcMcrJXxV3+tuAOTDz2r+/Zbw/OnjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\berrettoni.s\\source\\repos\\WebexBot\\WebexBot\\WebexBot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\berrettoni.s\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.1\\microsoft.aspnetcore.jsonpatch.3.1.1.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.1\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.1.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\microsoft.azure.services.appauthentication\\1.6.1\\microsoft.azure.services.appauthentication.1.6.1.nupkg.sha512",
@@ -101,7 +102,7 @@
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
-    "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\berrettoni.s\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",

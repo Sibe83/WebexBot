@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using WebexBot.Models;
 
 namespace WebexBot.Infrastructure
 {
@@ -107,6 +109,29 @@ namespace WebexBot.Infrastructure
                     }
                     return false;
                 }
+            }
+        }
+
+        public List<Actions> GetActionsByClientID(string clientID)
+        {
+            List<Actions> actionsList = new List<Actions>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sqlString = "Select * from Actions where ID in (select actionID from ActionsPermissions where ClientID = @clientIDparam and enabled = '1') order by Description";
+                try
+                {
+                    connection.Open();
+                    actionsList = connection.Query<Actions>(sqlString, new { clientIDparam = clientID }).ToList();
+                    connection.Close();
+                }
+                catch
+                {
+                    if (connection.State == System.Data.ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+                return actionsList;        
             }
         }
     }
