@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 using Newtonsoft.Json;
+using WebexBot.Infrastructure;
 
 namespace WebexBot.Bots
 {
     public class EchoBot : ActivityHandler
     {
+        AdoDbAccessor adoDbAccessor = new AdoDbAccessor();
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             await SendWelcomeMessageAsync(turnContext, cancellationToken);
@@ -20,6 +22,9 @@ namespace WebexBot.Bots
 
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
+            string message = "";
+
+
             if (turnContext.Activity.Attachments != null)
             {
                 var activity = MessageFactory.Text($" I got {turnContext.Activity.Attachments.Count} attachments");
@@ -36,7 +41,34 @@ namespace WebexBot.Bots
             }
             else
             {
-                var activity = turnContext.Activity.Text == "cards" ? MessageFactory.Attachment(CreateAdaptiveCardAttachment(Directory.GetCurrentDirectory() + @"/Resources/adaptive_card.json")) : MessageFactory.Text($"Echo: {turnContext.Activity.Text}");
+                string action = turnContext.Activity.Text;
+                string clientID = turnContext.Activity.From.Id;
+                adoDbAccessor.SaveRequest(clientID, action);
+
+                if (adoDbAccessor.ClientExists(clientID))
+                {
+                    int actionID;
+                    if (int.TryParse(action, out actionID))
+                    {
+                        if (adoDbAccessor.ClientExists(clientID, actionID)) {
+                            message = "Action " + actionID;
+                        }
+                        else
+                        {
+                            message = "You are not enabled for this action";
+                        }
+                    }
+                    else
+                    {
+                        message = "Not Valid ID";
+                    }
+                }
+
+                else
+                {
+                    message = "Your Client dosn't exist in our database";
+                }
+                var activity = turnContext.Activity.Text == "cards" ? MessageFactory.Attachment(CreateAdaptiveCardAttachment(Directory.GetCurrentDirectory() + @"/Resources/adaptive_card.json")) : MessageFactory.Text(message);
 
                 await turnContext.SendActivityAsync(activity, cancellationToken);
             }
