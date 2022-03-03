@@ -40,7 +40,6 @@ C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\S
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\Thrzn41.Util.dll
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\Thrzn41.WebexTeams.dll
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.csprojAssemblyReference.cache
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.AssemblyInfoInputs.cache
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.AssemblyInfo.cs
@@ -55,3 +54,11 @@ C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\W
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.dll
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.pdb
 C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.genruntimeconfig.cache
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\Dapper.dll
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\berrettoni.s\source\repos\WebexBot\WebexBot\obj\Release\netcoreapp3.1\WebexBot.csprojAssemblyReference.cache
